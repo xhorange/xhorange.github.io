@@ -1,205 +1,356 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  
-  
-  <title>Hello World | orange&#39;s page</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://xhorange.github.io/project/2024/07/15/hello-world/index.html">
-<meta property="og:site_name" content="orange&#39;s page">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
-<meta property="og:locale">
-<meta property="article:published_time" content="2024-07-15T13:22:15.876Z">
-<meta property="article:modified_time" content="2024-07-15T13:22:15.877Z">
-<meta property="article:author" content="eason yang">
-<meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/project/atom.xml" title="orange's page" type="application/atom+xml">
-  
-  
-    <link rel="shortcut icon" href="/project/favicon.png">
-  
-  
-  
-<link rel="stylesheet" href="/project/css/style.css">
-
-  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-<link rel="stylesheet" href="/project/fancybox/jquery.fancybox.min.css">
+    <meta name="theme-color" content="#32566b">
+    <meta name="msapplication-TileColor" content="#32566b">
+    
+    
+    
+    
+    <meta name="keywords" content="Android, Java, Hexo">
+    
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/project/favicons/apple-touch-icon.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="192x192" href="/project/favicons/android-chrome-192x192.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/project/favicons/favicon-32x32.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="16x16" href="/project/favicons/favicon-16x16.png">
+    
+    
+    <link rel="mask-icon" href="/project/favicons/safari-pinned-tab.svg" color="#32566b">
+    
+    
+    <link rel="manifest" href="/project/favicons/site.webmanifest">
+    
+    
+    <meta name="msapplication-config" content="/project/favicons/browserconfig.xml">
+    
+    
+    <link rel="alternate" href="/project/atom.xml" title="一个橙子's 小站" type="application/atom+xml" />
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="/project/favicons/favicon.ico">
+    
+    
+    <link rel="stylesheet" type="text/css" href="/project/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/project/css/index.css">
+    
+    <link rel="stylesheet" type="text/css" href="/project/css/sidebar.css">
+    
+    
+<link rel="stylesheet" type="text/css" href="/project/css/page.css">
+<link rel="stylesheet" type="text/css" href="/project/css/post.css">
 
-  
-  
-<meta name="generator" content="Hexo 7.3.0"></head>
-
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/project/" id="logo">orange&#39;s page</a>
-      </h1>
+    <link rel="stylesheet" type="text/css" href="/project/css/custom.css">
+    <link rel="stylesheet" type="text/css" href="/project/css/atom-one-dark.css">
+    <link rel="stylesheet" type="text/css" href="/project/css/lightgallery.min.css">
+    <script type="text/javascript" src="/project/js/jquery.min.js"></script>
+    <script defer type="text/javascript" src="/project/js/util.js"></script>
+    <script defer type="text/javascript" src="/project/js/clipboard.min.js"></script>
+    <script defer type="text/javascript" src="/project/js/scrollspy.js"></script>
+    <script defer type="text/javascript" src="/project/js/fontawesome-all.min.js"></script>
+    <script defer type="text/javascript" src="/project/js/lightgallery.min.js"></script>
+    <script defer type="text/javascript" src="/project/js/lg-fullscreen.min.js"></script>
+    <script defer type="text/javascript" src="/project/js/lg-hash.min.js"></script>
+    <script defer type="text/javascript" src="/project/js/lg-pager.min.js"></script>
+    <script defer type="text/javascript" src="/project/js/lg-thumbnail.min.js"></script>
+    <script defer type="text/javascript" src="/project/js/lg-zoom.min.js"></script>
+    
+    <script defer src="/project/js/busuanzi.pure.mini.js"></script>
+    
+    
+    <script defer type="text/javascript" src="/project/js/search.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var searchPath = "search.xml";
+      if (searchPath.length === 0) {
+        searchPath = "search.xml";
+      }
+      var path = "/project/" + searchPath;
+      searchFunc(path, "search-input", "search-result");
+    });
+    </script>
+    
+    
+    <script defer type="text/javascript" src="/project/js/index.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var cb = null;
+      var els = $(".post figure.highlight");
+      if (els.length) {
+        // Enabled Hexo highlight line number.
+        $(els).each(function (i, e) {
+          // $(e).before("<button class=\"copy button\">复制</button>");
+          $(e).before([
+            "<div class=\"code-titlebar\">",
+              "<div class=\"titlebar-left\">",
+                "<button class=\"copy\" aria-label=\"复制\"><i class=\"far fa-copy\"></i></button>",
+              "</div>",
+              "<div class=\"titlebar-center\">",
+                "code",
+              "</div>",
+              "<div class=\"titlebar-right\">",
+                "<button class=\"button-dot dot-minimize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-maximize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-close\" aria-label=\"Decoration\"></button>",
+              "</div>",
+            "</div>"
+          ].join(""));
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              return trigger.parentNode.parentNode.nextElementSibling.firstChild.firstChild.firstChild.lastChild.firstChild.firstChild;
+          }
+        });
+      } else {
+        // Disabled Hexo highlight line number.
+        els = $(".post pre code");
+        $(els).each(function (i, e) {
+          // Add button before pre, not code.
+          // $(e).parent().before("<button class=\"copy button\">复制</button>");
+          $(e).before([
+            "<div class=\"code-titlebar\">",
+              "<div class=\"titlebar-left\">",
+                "<button class=\"copy\" aria-label=\"复制\"><i class=\"far fa-copy\"></i></button>",
+              "</div>",
+              "<div class=\"titlebar-center\">",
+                "code",
+              "</div>",
+              "<div class=\"titlebar-right\">",
+                "<button class=\"button-dot dot-minimize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-maximize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-close\" aria-label=\"Decoration\"></button>",
+              "</div>",
+            "</div>"
+          ].join(""));
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              return trigger.parentNode.parentNode.nextElementSibling;
+          }
+        });
+      }
+      cb.on("success", function (e) {
+        e.clearSelection();
+        var trigger = e.trigger;
+        // Change button text as a user tip.
+        trigger.innerHTML = "<i class=\"far fa-check-square\"></i>";
+        $(trigger).addClass("copied");
+        // Change button text back;
+        setTimeout(function () {
+          trigger.innerHTML = "<i class=\"far fa-copy\"></i>";
+          $(trigger).removeClass("copied");
+        }, 1500);
+      });
+    });
+    </script>
+    
+    <script defer type="text/javascript" src="/project/js/custom.js"></script>
+    <title>Hello World | 一个橙子's 小站</title>
+  <meta name="generator" content="Hexo 7.3.0"></head>
+  <body itemscope itemtype="http://schema.org/WebPage" lang="zh_CN"  data-spy="scroll" data-target=".list-group">
+    
+<header id="header" class="header" style="background: #32566b;">
+  <div class="container">
+    <div class="header-container">
+      <div class="header-title">
+        <h1 class="title"><a href="/project/">一个橙子's 小站</a></h1>
+        <h2 class="subtitle"></h2>
+      </div>
+      
+      <div class="logo">
+        <img src="/project/images/logo.png" alt="logo">
+      </div>
       
     </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+    <nav id="nav" class="nav">
+      <a id="nav-toggle" class="nav-toggle" aria-hidden="true"><i class="fas fa-bars" aria-label="切换导航栏"></i></a>
+      <ul id="menu" role="menubar" aria-hidden="false">
         
-          <a class="main-nav-link" href="/project/">Home</a>
+        <li role="menuitem"><a href="/project/"><i class="fas fa-home"></i><span class="menu-text">首页</span></a></li>
         
-          <a class="main-nav-link" href="/project/archives">Archives</a>
+        <li role="menuitem"><a href="/project/archives/"><i class="fas fa-archive"></i><span class="menu-text">归档</span></a></li>
         
-      </nav>
-      <nav id="sub-nav">
-        
-        
-          <a class="nav-icon" href="/project/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
-        
-        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://xhorange.github.io/project"></form>
-      </div>
-    </div>
+      </ul>
+    </nav>
   </div>
 </header>
 
-      <div class="outer">
-        <section id="main"><article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/project/2024/07/15/hello-world/" class="article-date">
-  <time class="dt-published" datetime="2024-07-15T13:22:15.876Z" itemprop="datePublished">2024-07-15</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
+
+    <main id="main" class="main">
+      <div class="container">
+        <div class="main-container">
+          <div class="content">
+            
+<div id="post" class="page">
   
-    <h1 class="p-name article-title" itemprop="headline name">
-      Hello World
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://xhorange.github.io/project/project/2024/07/15/hello-world/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+       <meta itemprop="name" content="一个橙子">
+       <meta itemprop="description" content="">
+       <meta itemprop="image" content="/project/images/avatar.png">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+       <meta itemprop="name" content="一个橙子's 小站">
+      </span>
     </div>
-    <footer class="article-footer">
-      <a data-url="http://xhorange.github.io/project/2024/07/15/hello-world/" data-id="clyn1uawc0000s03h8su0gsu4" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">Hello World</h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2024-07-15T21:22:15+08:00">2024-07-15 21:22:15</time></span>
+        </span>
+        
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
       
-      
+    </main>
+    <footer class="post-footer">
       
     </footer>
-  </div>
+  </article>
   
-    
   
-</article>
+  <nav class="page-nav">
+    <div class="page-nav-next page-nav-item">
+      
+    </div>
+    <div class="page-nav-prev page-nav-item">
+      
+      <a href="/project/2024/07/15/hello-world%20copy/" rel="prev" title="Hello World2"><span class="nav-title">Hello World2</span><i class="fas fa-angle-right"></i></a>
+      
+    </div>
+  </nav>
+  
+  
+</div>
 
-
-</section>
-        
-          <aside id="sidebar">
+          </div>
+          
+          
+          
+<aside class="sidebar" id="sidebar" style="background: url(/project/images/background.png);">
   
-    
-
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/project/archives/2024/07/">July 2024</a></li></ul>
+  <div class="search">
+    <div class="form-group">
+      <i class="fas fa-search"></i><input type="search" id="search-input" name="q" results="0" placeholder="搜索" class="form-control"/>
     </div>
   </div>
-
-
+  <div class="search-result-box" id="search-result"></div>
   
+  
+<div class="info sidebar-item" id="info">
+  
+  <img class="author-avatar" src="/project/images/avatar.png" alt="一个橙子">
+  
+  <h1 class="author-name">一个橙子</h1>
+  <h2 class="author-description"></h2>
+  <div class="site-count">
     
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
+    
+    
+    
+    <div class="archives-count count-block">
+      <div class="site-count-title">归档</div>
+      <div><a href="/project/archives/">2</a></div>
+    </div>
+    
+    
+  </div>
+  
+  <div class="rss">
+    <a class="rss-link button sidebar-item" href="/project/atom.xml"><i class="fas fa-rss"></i>RSS</a>
+  </div>
+  
+</div>
+
+
+  <div class="sidebar-sticky">
+    
+    
+    <hr>
+    <div class="social-link sidebar-item">
+      <div><i class="far fa-address-card"></i>社交链接</p></div>
       <ul>
         
-          <li>
-            <a href="/project/2024/07/15/hello-world/">Hello World</a>
-          </li>
+        <li><i class="fas fa-envelope"></i><a href="mailto:eason.yang999@gmail.com" target="_blank">E-Mail</a></li>
+        
+        <li><i class="fab fa-github"></i><a href="https://github.com/xhorange?tab=repositories" target="_blank">GitHub</a></li>
         
       </ul>
     </div>
+    
+    
+    <hr>
+    <div class="blogroll sidebar-item">
+      <div><i class="fas fa-link"></i>友情链接</div>
+      <ul>
+        
+        <li><i class="fas fa-link"></i><a href="https://github.com/" target="_blank">GitHub</a></li>
+        
+        <li><i class="fas fa-link"></i><a href="https://developer.mozilla.org/" target="_blank">MDN</a></li>
+        
+        <li><i class="fas fa-link"></i><a href="https://developer.android.com/?hl=zh-cn" target="_blank">Android developer</a></li>
+        
+      </ul>
+    </div>
+    
   </div>
-
-  
 </aside>
+
+
+          
+        </div>
+      </div>
+    </main>
+    
+<footer id="footer" class="footer" style="background: #32566b;">
+  <div class="container">
+    <div class="back-to-top">
+      <button id="back-to-top"><i class="fas fa-angle-double-up" aria-label="回到顶部"></i></button>
+    </div>
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="copyright">
+          <span class="author">一个橙子</span><span class="year"><i class="far fa-copyright"></i>2024</span><span class="creative-commons"><i class="fab fa-creative-commons"></i><a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">BY 4.0</a></span>
+        </div>
+        
+        <div class="busuanzi">
+          <span id="busuanzi_container_site_pv"><i class="fas fa-eye" aria-label="站点点击量" aria-hidden="false"></i><span id="busuanzi_value_site_pv"></span></span><span id="busuanzi_container_site_uv"><i class="fas fa-user" aria-label="站点用户数" aria-hidden="false"></i><span id="busuanzi_value_site_uv"></span></span><span id="busuanzi_container_page_pv"><i class="far fa-file-alt"></i><span id="busuanzi_value_page_pv" aria-label="页面点击量" aria-hidden="false"></span></span>
+        </div>
         
       </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      
-      &copy; 2024 eason yang<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+      <div class="footer-right">
+        <div class="custom-info">
+          
+          托管于<i class="fab fa-github-alt"></i><a href="https://pages.github.com/" target="_blank">GitHub Pages</a>
+          
+        </div>
+        <div class="powered-by">
+          由 <a href="https://hexo.io/" target="_blank">Hexo</a> 强力驱动 | 主题 <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
+        </div>
+      </div>
     </div>
   </div>
 </footer>
 
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/project/" class="mobile-nav-link">Home</a>
-  
-    <a href="/project/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
 
-
-<script src="/project/js/jquery-3.6.4.min.js"></script>
-
-
-
-  
-<script src="/project/fancybox/jquery.fancybox.min.js"></script>
-
-
-
-
-<script src="/project/js/script.js"></script>
-
-
-
-
-
-  </div>
-</body>
+  </body>
 </html>

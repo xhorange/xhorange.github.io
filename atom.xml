@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>一个橙子&#39;s 小站</title>
+  
+  
+  <link href="http://xhorange.github.io/project/atom.xml" rel="self"/>
+  
+  <link href="http://xhorange.github.io/project/"/>
+  <updated>2024-07-15T14:52:14.847Z</updated>
+  <id>http://xhorange.github.io/project/</id>
+  
+  <author>
+    <name>一个橙子</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello World2</title>
+    <link href="http://xhorange.github.io/project/2024/07/15/hello-world%20copy/"/>
+    <id>http://xhorange.github.io/project/2024/07/15/hello-world%20copy/</id>
+    <published>2024-07-15T14:52:10.106Z</published>
+    <updated>2024-07-15T14:52:14.847Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://xhorange.github.io/project/2024/07/15/hello-world/"/>
+    <id>http://xhorange.github.io/project/2024/07/15/hello-world/</id>
+    <published>2024-07-15T13:22:15.876Z</published>
+    <updated>2024-07-15T14:51:51.187Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+</feed>
