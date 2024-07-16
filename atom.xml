@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>橙子的分享点</title>
+  <title>橙子的分享</title>
   
   
   <link href="http://xhorange.github.io/atom.xml" rel="self"/>
   
   <link href="http://xhorange.github.io/"/>
-  <updated>2024-07-16T14:45:14.090Z</updated>
+  <updated>2024-07-16T16:18:40.877Z</updated>
   <id>http://xhorange.github.io/</id>
   
   <author>
@@ -21,19 +21,19 @@
     <link href="http://xhorange.github.io/2024/07/16/gilde%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90-2-%E7%BC%93%E5%AD%98%E8%AE%BE%E8%AE%A1/"/>
     <id>http://xhorange.github.io/2024/07/16/gilde%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90-2-%E7%BC%93%E5%AD%98%E8%AE%BE%E8%AE%A1/</id>
     <published>2024-07-16T14:39:27.000Z</published>
-    <updated>2024-07-16T14:45:14.090Z</updated>
+    <updated>2024-07-16T16:18:40.877Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;glide缓存设计&lt;/p&gt;
-&lt;p&gt;glide有内存缓存和磁盘缓存两种，内存缓存分为active和memory</summary>
-        
-      
+    <summary type="html">&lt;h3 id=&quot;glide缓存设计&quot;&gt;&lt;a href=&quot;#glide缓存设计&quot; class=&quot;headerlink&quot; title=&quot;glide缓存设计&quot;&gt;&lt;/a&gt;glide缓存设计&lt;/h3&gt;&lt;p&gt;glide有内存缓存和磁盘缓存两种&lt;/p&gt;
+&lt;h3 id=&quot;内存缓存&quot;&gt;&lt;a href=&quot;#内存缓存&quot; class=&quot;headerlink&quot; title=&quot;内存缓存&quot;&gt;&lt;/a&gt;内存缓存&lt;/h3&gt;&lt;h4 id=&quot;active&quot;&gt;&lt;a href=&quot;#active&quot; class=&quot;headerlink&quot; title=&quot;active&quot;&gt;&lt;/a&gt;active&lt;/h4&gt;&lt;p&gt;active表示&lt;strong&gt;正在被其他view使用的资源&lt;/strong&gt;，通过ActiveResources进行管理。该对象随engine初始化。&lt;br&gt;activeResources通过一个map存储。从内存加载或者加载完毕时会放入，engine执行relesase时会释放。使用弱引用。&lt;/p&gt;
+&lt;h4 id=&quot;memory-cache&quot;&gt;&lt;a href=&quot;#memory-cache&quot; class=&quot;headerlink&quot; title=&quot;memory cache&quot;&gt;&lt;/a&gt;memory cache&lt;/h4&gt;&lt;p&gt;&lt;strong&gt;策略&lt;/strong&gt;：LRU&lt;br&gt;&lt;strong&gt;来源&lt;/strong&gt;：active resources&lt;/p&gt;
+&lt;p&gt;问：为什么有活动缓存？&lt;br&gt;答：确保正在使用的图片长时间未加载不被移除缓存&lt;/p&gt;
+&lt;h3 id=&quot;磁盘缓存&quot;&gt;&lt;a href=&quot;#磁盘缓存&quot; class=&quot;headerlink&quot; title=&quot;磁盘缓存&quot;&gt;&lt;/a&gt;磁盘缓存&lt;/h3&gt;&lt;p&gt;两种，一种时资源缓存，一种是数据缓存&lt;/p&gt;
+&lt;p&gt;分别对应ResourceCacheGenerator和DataCacheGenerator&lt;/p&gt;</summary>
     
     
+    
+    <category term="Android三方库源码分析" scheme="http://xhorange.github.io/categories/Android%E4%B8%89%E6%96%B9%E5%BA%93%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/"/>
     
     
     <category term="Android" scheme="http://xhorange.github.io/tags/Android/"/>
@@ -49,18 +49,29 @@
     <link href="http://xhorange.github.io/2024/07/16/gilde%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90-1-%E6%95%B4%E4%BD%93%E6%B5%81%E7%A8%8B/"/>
     <id>http://xhorange.github.io/2024/07/16/gilde%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90-1-%E6%95%B4%E4%BD%93%E6%B5%81%E7%A8%8B/</id>
     <published>2024-07-16T14:34:41.000Z</published>
-    <updated>2024-07-16T15:33:31.158Z</updated>
+    <updated>2024-07-16T16:14:50.192Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot;</summary>
-        
-      
+    <summary type="html">&lt;h3 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h3&gt;&lt;p&gt;本篇是该博客的一篇技术文章，也是安卓三方库源码分析的第一篇文章。我们首先来分析的库是图片库–glide.哪怕是安卓开发的入门者都熟悉glide的使用方法。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;hljs java&quot;&gt;Glide.with(context).load(url).into(imageView)&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;这里我们就可以看出这个库的设计之精巧，很明显这个库使用了builder的设计模式，使用起来十分简单方便。我们就从这个从网络url获取图片的例子开始，挨个分析这里的三个方法。分析完毕之后就会发现在这个简单的api背后，隐藏了负责的流程。&lt;/p&gt;
+&lt;h3 id=&quot;从with开始&quot;&gt;&lt;a href=&quot;#从with开始&quot; class=&quot;headerlink&quot; title=&quot;从with开始&quot;&gt;&lt;/a&gt;从with开始&lt;/h3&gt;&lt;pre&gt;&lt;code class=&quot;hljs java&quot;&gt;&lt;span class=&quot;hljs-comment&quot;&gt;//with方法其实是最外的一个封装，内部执行了两个方法，getRetriever和get&lt;/span&gt;
+&lt;span class=&quot;hljs-keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;hljs-keyword&quot;&gt;static&lt;/span&gt; RequestManager &lt;span class=&quot;hljs-title function_&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;hljs-params&quot;&gt;(&lt;span class=&quot;hljs-meta&quot;&gt;@NonNull&lt;/span&gt; Context context)&lt;/span&gt; &amp;#123;
+  &lt;span class=&quot;hljs-keyword&quot;&gt;return&lt;/span&gt; getRetriever(context).get(context);
+&amp;#125;
+&lt;span class=&quot;hljs-comment&quot;&gt;//这里还有很多层嵌套，就不一一展开，感兴趣可以看源码&lt;/span&gt;
+&lt;span class=&quot;hljs-keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;hljs-keyword&quot;&gt;static&lt;/span&gt; RequestManagerRetriever &lt;span class=&quot;hljs-title function_&quot;&gt;getRetriever&lt;/span&gt;&lt;span class=&quot;hljs-params&quot;&gt;(&lt;span class=&quot;hljs-meta&quot;&gt;@Nullable&lt;/span&gt; Context context)&lt;/span&gt; &amp;#123;
+  &lt;span class=&quot;hljs-comment&quot;&gt;// Context could be null for other reasons (ie the user passes in null), but in practice it will&lt;/span&gt;
+  &lt;span class=&quot;hljs-comment&quot;&gt;// only occur due to errors with the Fragment lifecycle.&lt;/span&gt;
+  Preconditions.checkNotNull(context, DESTROYED_ACTIVITY_WARNING);
+  &lt;span class=&quot;hljs-keyword&quot;&gt;return&lt;/span&gt; Glide.get(context).getRequestManagerRetriever();
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;</summary>
     
     
+    
+    <category term="Android三方库源码分析" scheme="http://xhorange.github.io/categories/Android%E4%B8%89%E6%96%B9%E5%BA%93%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/"/>
     
     
     <category term="Android" scheme="http://xhorange.github.io/tags/Android/"/>
