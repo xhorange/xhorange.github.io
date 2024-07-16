@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>一个橙子&#39;s 小站</title>
+  <title>橙子的分享点</title>
   
   
   <link href="http://xhorange.github.io/atom.xml" rel="self"/>
   
   <link href="http://xhorange.github.io/"/>
-  <updated>2024-07-15T14:52:14.847Z</updated>
+  <updated>2024-07-16T14:45:14.090Z</updated>
   <id>http://xhorange.github.io/</id>
   
   <author>
@@ -17,28 +17,57 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hello World2</title>
-    <link href="http://xhorange.github.io/2024/07/15/hello-world%20copy/"/>
-    <id>http://xhorange.github.io/2024/07/15/hello-world%20copy/</id>
-    <published>2024-07-15T14:52:10.106Z</published>
-    <updated>2024-07-15T14:52:14.847Z</updated>
+    <title>gilde源码分析(2)-缓存设计</title>
+    <link href="http://xhorange.github.io/2024/07/16/gilde%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90-2-%E7%BC%93%E5%AD%98%E8%AE%BE%E8%AE%A1/"/>
+    <id>http://xhorange.github.io/2024/07/16/gilde%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90-2-%E7%BC%93%E5%AD%98%E8%AE%BE%E8%AE%A1/</id>
+    <published>2024-07-16T14:39:27.000Z</published>
+    <updated>2024-07-16T14:45:14.090Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;glide缓存设计&lt;/p&gt;
+&lt;p&gt;glide有内存缓存和磁盘缓存两种，内存缓存分为active和memory</summary>
+        
+      
     
     
     
     
+    <category term="Android" scheme="http://xhorange.github.io/tags/Android/"/>
+    
+    <category term="glide" scheme="http://xhorange.github.io/tags/glide/"/>
+    
+    <category term="源码分析" scheme="http://xhorange.github.io/tags/%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/"/>
     
   </entry>
   
   <entry>
-    <title>Hello World</title>
-    <link href="http://xhorange.github.io/2024/07/15/hello-world/"/>
-    <id>http://xhorange.github.io/2024/07/15/hello-world/</id>
-    <published>2024-07-15T13:22:15.876Z</published>
-    <updated>2024-07-15T14:51:51.187Z</updated>
+    <title>gilde源码分析(1)-整体流程</title>
+    <link href="http://xhorange.github.io/2024/07/16/gilde%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90-1-%E6%95%B4%E4%BD%93%E6%B5%81%E7%A8%8B/"/>
+    <id>http://xhorange.github.io/2024/07/16/gilde%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90-1-%E6%95%B4%E4%BD%93%E6%B5%81%E7%A8%8B/</id>
+    <published>2024-07-16T14:34:41.000Z</published>
+    <updated>2024-07-16T15:33:31.158Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot;</summary>
+        
+      
     
     
     
     
+    <category term="Android" scheme="http://xhorange.github.io/tags/Android/"/>
+    
+    <category term="glide" scheme="http://xhorange.github.io/tags/glide/"/>
+    
+    <category term="源码分析" scheme="http://xhorange.github.io/tags/%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/"/>
     
   </entry>
   
