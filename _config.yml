@@ -3,18 +3,18 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 橙子的分享
+title: 一橙的分享
 subtitle: ''
 description: '码农，记录在工作学习中积累的技术和经验'
 keywords: Java Android React
-author: 一个橙子
+author: 一橙
 language: zh_CN
 timezone: 'Asia/Shanghai'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: http://xhorange.github.io/
-permalink: :year/:month/:day/:title/
+permalink: :title-:hash/
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
@@ -83,7 +83,7 @@ meta_generator: true
 ## You can customize the date format as defined in
 ## http://momentjs.com/docs/#/displaying/format/
 date_format: YYYY-MM-DD
-time_format: HH:mm:ss
+time_format: HH:mm
 ## updated_option supports 'mtime', 'date', 'empty'
 updated_option: 'mtime'
 
