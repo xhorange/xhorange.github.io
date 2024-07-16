@@ -2,6 +2,7 @@
 title: gilde源码分析(1)-整体流程
 date: 2024-07-16 22:34:41
 tags: [Android,glide,源码分析]
+categories: Android三方库源码分析
 ---
 ### 概述
 
@@ -29,7 +30,7 @@ Glide.with(context).load(url).into(imageView)
   }
 
 ```
-
+<!--more-->
 Glide.get() 作用是获取一个glide实例，是同步调用；如果这个实例未初始化，会最终调用到Glide的build方法，触发初始化任务。
 
 ```java
