@@ -46,7 +46,7 @@
     <meta name="msapplication-config" content="/favicons/browserconfig.xml">
     
     
-    <link rel="alternate" href="/atom.xml" title="橙子的分享" type="application/atom+xml" />
+    <link rel="alternate" href="/atom.xml" title="一橙的分享" type="application/atom+xml" />
     
     
     <link rel="shortcut icon" type="image/x-icon" href="/favicons/favicon.ico">
@@ -168,7 +168,7 @@
     </script>
     
     <script defer type="text/javascript" src="/js/custom.js"></script>
-    <title>橙子的分享</title>
+    <title>一橙的分享</title>
   <meta name="generator" content="Hexo 7.3.0"></head>
   <body itemscope itemtype="http://schema.org/WebPage" lang="zh_CN"  data-spy="scroll" data-target=".list-group">
     
@@ -176,7 +176,7 @@
   <div class="container">
     <div class="header-container">
       <div class="header-title">
-        <h1 class="title"><a href="/">橙子的分享</a></h1>
+        <h1 class="title"><a href="/">一橙的分享</a></h1>
         <h2 class="subtitle"></h2>
       </div>
       
@@ -209,24 +209,78 @@
   
   <article class="article post card" itemscope itemtype="http://schema.org/Article">
     <div class="post-block">
-      <link itemprop="mainEntityOfPage" href="http://xhorange.github.io/2024/07/16/gilde%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90-2-%E7%BC%93%E5%AD%98%E8%AE%BE%E8%AE%A1/">
+      <link itemprop="mainEntityOfPage" href="http://xhorange.github.io/http%E7%B3%BB%E5%88%97%E5%8D%8F%E8%AE%AE%E7%AE%80%E4%BB%8B-1-55959dc08b8a/">
       <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-        <meta itemprop="name" content="一个橙子">
+        <meta itemprop="name" content="一橙">
         <meta itemprop="description" content="码农，记录在工作学习中积累的技术和经验">
         <meta itemprop="image" content="/images/avatar.png">
       </span>
       <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-        <meta itemprop="name" content="橙子的分享">
+        <meta itemprop="name" content="一橙的分享">
       </span>
     </div>
     <header class="post-header">
       <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link post-title-link-external" href="/2024/07/16/gilde%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90-2-%E7%BC%93%E5%AD%98%E8%AE%BE%E8%AE%A1/" itemprop="url">gilde源码分析(2)-缓存设计</a>
+        <a class="post-title-link post-title-link-external" href="/http%E7%B3%BB%E5%88%97%E5%8D%8F%E8%AE%AE%E7%AE%80%E4%BB%8B-1-55959dc08b8a/" itemprop="url">http系列协议简介(1)</a>
       </h1>
       <div class="post-meta">
         
         <span class="post-date">
-          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2024-07-16T22:39:27+08:00">2024-07-16 22:39:27</time></span>
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2024-07-17T00:23:25+08:00">2024-07-17 00:23</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/" itemprop="url" rel="index"><span itemprop="name">网络基础</span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      
+      <h3 id="http协议概述"><a href="#http协议概述" class="headerlink" title="http协议概述"></a>http协议概述</h3><p>http协议，超文本传输协议，属于应用层协议。工作在tcp&#x2F;ip协议之上。随时代发展，http协议也出现了1.0，1.1，2.0.3.0等版本迭代。网络安全方面也引入了ssl。在工作中，我们需要了解http协议的规范，工作流程，以及应用场景。</p>
+<h3 id="http协议"><a href="#http协议" class="headerlink" title="http协议"></a>http协议</h3><p>在介绍协议时，考虑到由浅入深，所以这里先介绍http1.0，后续会介绍其他版本</p>
+<h4 id="url格式"><a href="#url格式" class="headerlink" title="url格式"></a>url格式</h4><p>   http_URL &#x3D; “http:” “&#x2F;&#x2F;“ host [ “:” port ] [ abs_path [ “?” query ]]<br>   http的url格式如上，最开始为协议头，注意其中port不指定的情况下，http默认80，https默认443。host为主机名，尽可能使用网址而不是ip地址。<br>
+      
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/" rel="tag"><i class="fas fa-tags"></i>网络基础</a>
+        
+        <a class="post-tag button" href="/tags/http/" rel="tag"><i class="fas fa-tags"></i>http</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://xhorange.github.io/gilde%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90-2-%E7%BC%93%E5%AD%98%E8%AE%BE%E8%AE%A1-13be795a3eb0/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="一橙">
+        <meta itemprop="description" content="码农，记录在工作学习中积累的技术和经验">
+        <meta itemprop="image" content="/images/avatar.png">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="一橙的分享">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="/gilde%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90-2-%E7%BC%93%E5%AD%98%E8%AE%BE%E8%AE%A1-13be795a3eb0/" itemprop="url">gilde源码分析(2)-缓存设计</a>
+      </h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2024-07-16T22:39:27+08:00">2024-07-16 22:39</time></span>
         </span>
         
         
@@ -268,24 +322,24 @@
   
   <article class="article post card" itemscope itemtype="http://schema.org/Article">
     <div class="post-block">
-      <link itemprop="mainEntityOfPage" href="http://xhorange.github.io/2024/07/16/gilde%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90-1-%E6%95%B4%E4%BD%93%E6%B5%81%E7%A8%8B/">
+      <link itemprop="mainEntityOfPage" href="http://xhorange.github.io/gilde%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90-1-%E6%95%B4%E4%BD%93%E6%B5%81%E7%A8%8B-25cc33410bf3/">
       <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-        <meta itemprop="name" content="一个橙子">
+        <meta itemprop="name" content="一橙">
         <meta itemprop="description" content="码农，记录在工作学习中积累的技术和经验">
         <meta itemprop="image" content="/images/avatar.png">
       </span>
       <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-        <meta itemprop="name" content="橙子的分享">
+        <meta itemprop="name" content="一橙的分享">
       </span>
     </div>
     <header class="post-header">
       <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link post-title-link-external" href="/2024/07/16/gilde%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90-1-%E6%95%B4%E4%BD%93%E6%B5%81%E7%A8%8B/" itemprop="url">gilde源码分析(1)-整体流程</a>
+        <a class="post-title-link post-title-link-external" href="/gilde%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90-1-%E6%95%B4%E4%BD%93%E6%B5%81%E7%A8%8B-25cc33410bf3/" itemprop="url">gilde源码分析(1)-整体流程</a>
       </h1>
       <div class="post-meta">
         
         <span class="post-date">
-          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2024-07-16T22:34:41+08:00">2024-07-16 22:34:41</time></span>
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2024-07-16T22:34:41+08:00">2024-07-16 22:34</time></span>
         </span>
         
         
@@ -355,9 +409,9 @@
   
 <div class="info sidebar-item" id="info">
   
-  <img class="author-avatar" src="/images/avatar.png" alt="一个橙子">
+  <img class="author-avatar" src="/images/avatar.png" alt="一橙">
   
-  <h1 class="author-name">一个橙子</h1>
+  <h1 class="author-name">一橙</h1>
   <h2 class="author-description">码农，记录在工作学习中积累的技术和经验</h2>
   <div class="site-count">
     
@@ -366,21 +420,21 @@
     
     <div class="archives-count count-block">
       <div class="site-count-title">归档</div>
-      <div><a href="/archives/">2</a></div>
+      <div><a href="/archives/">3</a></div>
     </div>
     
     
     
     <div class="categories-count count-block">
       <div class="site-count-title">分类</div>
-      <div><a href="/categories/">1</a></div>
+      <div><a href="/categories/">2</a></div>
     </div>
     
     
     
     <div class="tags-count count-block">
       <div class="site-count-title">标签</div>
-      <div><a href="/tags/">3</a></div>
+      <div><a href="/tags/">5</a></div>
     </div>
     
     
@@ -440,7 +494,7 @@
     <div class="footer-container">
       <div class="footer-left">
         <div class="copyright">
-          <span class="author">一个橙子</span><span class="year"><i class="far fa-copyright"></i>2024 - 2024</span><span class="creative-commons"><i class="fab fa-creative-commons"></i><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">BY-NC-SA 4.0</a></span>
+          <span class="author">一橙</span><span class="year"><i class="far fa-copyright"></i>2024 - 2024</span><span class="creative-commons"><i class="fab fa-creative-commons"></i><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">BY-NC-SA 4.0</a></span>
         </div>
         
         <div class="busuanzi">

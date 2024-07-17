@@ -1,27 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>橙子的分享</title>
+  <title>一橙的分享</title>
   
   
   <link href="http://xhorange.github.io/atom.xml" rel="self"/>
   
   <link href="http://xhorange.github.io/"/>
-  <updated>2024-07-16T16:18:40.877Z</updated>
+  <updated>2024-07-17T16:35:19.646Z</updated>
   <id>http://xhorange.github.io/</id>
   
   <author>
-    <name>一个橙子</name>
+    <name>一橙</name>
     
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>http系列协议简介(1)</title>
+    <link href="http://xhorange.github.io/http%E7%B3%BB%E5%88%97%E5%8D%8F%E8%AE%AE%E7%AE%80%E4%BB%8B-1-55959dc08b8a/"/>
+    <id>http://xhorange.github.io/http%E7%B3%BB%E5%88%97%E5%8D%8F%E8%AE%AE%E7%AE%80%E4%BB%8B-1-55959dc08b8a/</id>
+    <published>2024-07-16T16:23:25.000Z</published>
+    <updated>2024-07-17T16:35:19.646Z</updated>
+    
+    
+    <summary type="html">&lt;h3 id=&quot;http协议概述&quot;&gt;&lt;a href=&quot;#http协议概述&quot; class=&quot;headerlink&quot; title=&quot;http协议概述&quot;&gt;&lt;/a&gt;http协议概述&lt;/h3&gt;&lt;p&gt;http协议，超文本传输协议，属于应用层协议。工作在tcp&amp;#x2F;ip协议之上。随时代发展，http协议也出现了1.0，1.1，2.0.3.0等版本迭代。网络安全方面也引入了ssl。在工作中，我们需要了解http协议的规范，工作流程，以及应用场景。&lt;/p&gt;
+&lt;h3 id=&quot;http协议&quot;&gt;&lt;a href=&quot;#http协议&quot; class=&quot;headerlink&quot; title=&quot;http协议&quot;&gt;&lt;/a&gt;http协议&lt;/h3&gt;&lt;p&gt;在介绍协议时，考虑到由浅入深，所以这里先介绍http1.0，后续会介绍其他版本&lt;/p&gt;
+&lt;h4 id=&quot;url格式&quot;&gt;&lt;a href=&quot;#url格式&quot; class=&quot;headerlink&quot; title=&quot;url格式&quot;&gt;&lt;/a&gt;url格式&lt;/h4&gt;&lt;p&gt;   http_URL &amp;#x3D; “http:” “&amp;#x2F;&amp;#x2F;“ host [ “:” port ] [ abs_path [ “?” query ]]&lt;br&gt;   http的url格式如上，最开始为协议头，注意其中port不指定的情况下，http默认80，https默认443。host为主机名，尽可能使用网址而不是ip地址。&lt;br&gt;</summary>
+    
+    
+    
+    <category term="网络基础" scheme="http://xhorange.github.io/categories/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="网络基础" scheme="http://xhorange.github.io/tags/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/"/>
+    
+    <category term="http" scheme="http://xhorange.github.io/tags/http/"/>
+    
+  </entry>
+  
+  <entry>
     <title>gilde源码分析(2)-缓存设计</title>
-    <link href="http://xhorange.github.io/2024/07/16/gilde%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90-2-%E7%BC%93%E5%AD%98%E8%AE%BE%E8%AE%A1/"/>
-    <id>http://xhorange.github.io/2024/07/16/gilde%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90-2-%E7%BC%93%E5%AD%98%E8%AE%BE%E8%AE%A1/</id>
+    <link href="http://xhorange.github.io/gilde%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90-2-%E7%BC%93%E5%AD%98%E8%AE%BE%E8%AE%A1-13be795a3eb0/"/>
+    <id>http://xhorange.github.io/gilde%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90-2-%E7%BC%93%E5%AD%98%E8%AE%BE%E8%AE%A1-13be795a3eb0/</id>
     <published>2024-07-16T14:39:27.000Z</published>
-    <updated>2024-07-16T16:18:40.877Z</updated>
+    <updated>2024-07-16T16:23:01.346Z</updated>
     
     
     <summary type="html">&lt;h3 id=&quot;glide缓存设计&quot;&gt;&lt;a href=&quot;#glide缓存设计&quot; class=&quot;headerlink&quot; title=&quot;glide缓存设计&quot;&gt;&lt;/a&gt;glide缓存设计&lt;/h3&gt;&lt;p&gt;glide有内存缓存和磁盘缓存两种&lt;/p&gt;
@@ -46,10 +69,10 @@
   
   <entry>
     <title>gilde源码分析(1)-整体流程</title>
-    <link href="http://xhorange.github.io/2024/07/16/gilde%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90-1-%E6%95%B4%E4%BD%93%E6%B5%81%E7%A8%8B/"/>
-    <id>http://xhorange.github.io/2024/07/16/gilde%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90-1-%E6%95%B4%E4%BD%93%E6%B5%81%E7%A8%8B/</id>
+    <link href="http://xhorange.github.io/gilde%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90-1-%E6%95%B4%E4%BD%93%E6%B5%81%E7%A8%8B-25cc33410bf3/"/>
+    <id>http://xhorange.github.io/gilde%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90-1-%E6%95%B4%E4%BD%93%E6%B5%81%E7%A8%8B-25cc33410bf3/</id>
     <published>2024-07-16T14:34:41.000Z</published>
-    <updated>2024-07-16T16:14:50.192Z</updated>
+    <updated>2024-07-16T16:23:01.346Z</updated>
     
     
     <summary type="html">&lt;h3 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h3&gt;&lt;p&gt;本篇是该博客的一篇技术文章，也是安卓三方库源码分析的第一篇文章。我们首先来分析的库是图片库–glide.哪怕是安卓开发的入门者都熟悉glide的使用方法。&lt;/p&gt;

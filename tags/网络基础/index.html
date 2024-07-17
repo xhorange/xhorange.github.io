@@ -46,7 +46,7 @@
     <meta name="msapplication-config" content="/favicons/browserconfig.xml">
     
     
-    <link rel="alternate" href="/atom.xml" title="橙子的分享" type="application/atom+xml" />
+    <link rel="alternate" href="/atom.xml" title="一橙的分享" type="application/atom+xml" />
     
     
     <link rel="shortcut icon" type="image/x-icon" href="/favicons/favicon.ico">
@@ -168,7 +168,7 @@
     </script>
     
     <script defer type="text/javascript" src="/js/custom.js"></script>
-    <title>gilde源码分析(2)-缓存设计 | 橙子的分享</title>
+    <title>标签: 网络基础 | 一橙的分享</title>
   <meta name="generator" content="Hexo 7.3.0"></head>
   <body itemscope itemtype="http://schema.org/WebPage" lang="zh_CN"  data-spy="scroll" data-target=".list-group">
     
@@ -176,7 +176,7 @@
   <div class="container">
     <div class="header-container">
       <div class="header-title">
-        <h1 class="title"><a href="/">橙子的分享</a></h1>
+        <h1 class="title"><a href="/">一橙的分享</a></h1>
         <h2 class="subtitle"></h2>
       </div>
       
@@ -204,76 +204,21 @@
         <div class="main-container">
           <div class="content">
             
-<div id="post" class="page">
+<div id="tag" class="tag page">
+  <h1 class="page-title">网络基础</h1>
   
   <article class="article post card" itemscope itemtype="http://schema.org/Article">
-    <div class="post-block">
-      <link itemprop="mainEntityOfPage" href="http://xhorange.github.io/2024/07/16/gilde%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90-2-%E7%BC%93%E5%AD%98%E8%AE%BE%E8%AE%A1/">
-      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-       <meta itemprop="name" content="一个橙子">
-       <meta itemprop="description" content="码农，记录在工作学习中积累的技术和经验">
-       <meta itemprop="image" content="/images/avatar.png">
+    <header id="post-header" class="post-header">
+      <h1 class="post-title-simple" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="/http%E7%B3%BB%E5%88%97%E5%8D%8F%E8%AE%AE%E7%AE%80%E4%BB%8B-1-55959dc08b8a/" itemprop="url">http系列协议简介(1)</a>
+      </h1>
+      
+      <span class="post-date">
+        <time title="post-date" itemprop="dateCreated datePublished" datetime="2024-07-17T00:23:25+08:00">07-17</time>
       </span>
-      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-       <meta itemprop="name" content="橙子的分享">
-      </span>
-    </div>
-    <header class="post-header">
-      <h1 class="post-title" itemprop="name headline">gilde源码分析(2)-缓存设计</h1>
-      <div class="post-meta">
-        
-        <span class="post-date">
-          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2024-07-16T22:39:27+08:00">2024-07-16 22:39:27</time></span>
-        </span>
-        
-        
-        
-        <span class="post-meta-divider divider">|</span>
-        
-        <span class="post-categories">
-          
-          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Android%E4%B8%89%E6%96%B9%E5%BA%93%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/" itemprop="url" rel="index"><span itemprop="name">Android三方库源码分析</span></a></span>
-        </span>
-        
-        
-      </div>
+      
     </header>
-    <main class="post-main" itemprop="articleBody">
-      <h3 id="glide缓存设计"><a href="#glide缓存设计" class="headerlink" title="glide缓存设计"></a>glide缓存设计</h3><p>glide有内存缓存和磁盘缓存两种</p>
-<h3 id="内存缓存"><a href="#内存缓存" class="headerlink" title="内存缓存"></a>内存缓存</h3><h4 id="active"><a href="#active" class="headerlink" title="active"></a>active</h4><p>active表示<strong>正在被其他view使用的资源</strong>，通过ActiveResources进行管理。该对象随engine初始化。<br>activeResources通过一个map存储。从内存加载或者加载完毕时会放入，engine执行relesase时会释放。使用弱引用。</p>
-<h4 id="memory-cache"><a href="#memory-cache" class="headerlink" title="memory cache"></a>memory cache</h4><p><strong>策略</strong>：LRU<br><strong>来源</strong>：active resources</p>
-<p>问：为什么有活动缓存？<br>答：确保正在使用的图片长时间未加载不被移除缓存</p>
-<h3 id="磁盘缓存"><a href="#磁盘缓存" class="headerlink" title="磁盘缓存"></a>磁盘缓存</h3><p>两种，一种时资源缓存，一种是数据缓存</p>
-<p>分别对应ResourceCacheGenerator和DataCacheGenerator</p>
-<span id="more"></span>
-
-    </main>
-    <footer class="post-footer">
-      
-      <div class="post-tags">
-        
-        <a class="post-tag button" href="/tags/Android/" rel="tag"><i class="fas fa-tags"></i>Android</a>
-        
-        <a class="post-tag button" href="/tags/glide/" rel="tag"><i class="fas fa-tags"></i>glide</a>
-        
-        <a class="post-tag button" href="/tags/%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/" rel="tag"><i class="fas fa-tags"></i>源码分析</a>
-        
-      </div>
-      
-    </footer>
   </article>
-  
-  
-  <nav class="page-nav">
-    <div class="page-nav-next page-nav-item">
-      
-      <a href="/2024/07/16/gilde%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90-1-%E6%95%B4%E4%BD%93%E6%B5%81%E7%A8%8B/" rel="next" title="gilde源码分析(1)-整体流程"><i class="fas fa-angle-left"></i><span class="nav-title">gilde源码分析(1)-整体流程</span></a>
-      
-    </div>
-    <div class="page-nav-prev page-nav-item">
-      
-    </div>
-  </nav>
   
   
 </div>
@@ -294,9 +239,9 @@
   
 <div class="info sidebar-item" id="info">
   
-  <img class="author-avatar" src="/images/avatar.png" alt="一个橙子">
+  <img class="author-avatar" src="/images/avatar.png" alt="一橙">
   
-  <h1 class="author-name">一个橙子</h1>
+  <h1 class="author-name">一橙</h1>
   <h2 class="author-description">码农，记录在工作学习中积累的技术和经验</h2>
   <div class="site-count">
     
@@ -305,21 +250,21 @@
     
     <div class="archives-count count-block">
       <div class="site-count-title">归档</div>
-      <div><a href="/archives/">2</a></div>
+      <div><a href="/archives/">3</a></div>
     </div>
     
     
     
     <div class="categories-count count-block">
       <div class="site-count-title">分类</div>
-      <div><a href="/categories/">1</a></div>
+      <div><a href="/categories/">2</a></div>
     </div>
     
     
     
     <div class="tags-count count-block">
       <div class="site-count-title">标签</div>
-      <div><a href="/tags/">3</a></div>
+      <div><a href="/tags/">5</a></div>
     </div>
     
     
@@ -333,17 +278,6 @@
 
 
   <div class="sidebar-sticky">
-    
-    
-    
-    
-    
-    <hr>
-    <div class="post-toc sidebar-item" id="toc-div">
-      <div><i class="fas fa-list-ol"></i>文章目录</div>
-      <div class="post-toc-content"><ol class="list-group toc"><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#glide%E7%BC%93%E5%AD%98%E8%AE%BE%E8%AE%A1"><span class="toc-text">glide缓存设计</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E5%86%85%E5%AD%98%E7%BC%93%E5%AD%98"><span class="toc-text">内存缓存</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#active"><span class="toc-text">active</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#memory-cache"><span class="toc-text">memory cache</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E7%A3%81%E7%9B%98%E7%BC%93%E5%AD%98"><span class="toc-text">磁盘缓存</span></a></li></ol></div>
-    </div>
-    
     
     
     <hr>
@@ -390,7 +324,7 @@
     <div class="footer-container">
       <div class="footer-left">
         <div class="copyright">
-          <span class="author">一个橙子</span><span class="year"><i class="far fa-copyright"></i>2024 - 2024</span><span class="creative-commons"><i class="fab fa-creative-commons"></i><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">BY-NC-SA 4.0</a></span>
+          <span class="author">一橙</span><span class="year"><i class="far fa-copyright"></i>2024 - 2024</span><span class="creative-commons"><i class="fab fa-creative-commons"></i><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">BY-NC-SA 4.0</a></span>
         </div>
         
         <div class="busuanzi">
